@@ -53,7 +53,7 @@ class Reader extends XMLReader {
     public function getClark() {
 
         if (!$this->namespaceURI) {
-            return null;
+            return $this->localName;
         }
         return '{' . $this->namespaceURI . '}' . $this->localName;
 
